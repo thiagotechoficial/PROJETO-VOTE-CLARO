@@ -11,7 +11,7 @@ Nesta arquitetura, um único endereço HTTPS público serve o aplicativo móvel 
 1. Crie um repositório Git privado ou público com o conteúdo desta pasta (`voto-claro`).
 2. **No Render (plano gratuito com HTTPS automático):**
    - Acesse `New +` -> `Blueprint` (que lerá automaticamente o arquivo `render.yaml`) **ou** `New Web Service`.
-   - Comando de Build: `npm install && npm run build`
+   - Comando de Build: `npm ci --include=dev && npm run build`
    - Comando de Inicialização: `npm start`
    - Health Check Path: `/api/health`
 3. **Variáveis de ambiente no painel da plataforma (segredos do servidor):**

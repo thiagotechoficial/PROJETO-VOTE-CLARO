@@ -3,11 +3,11 @@ services:
     name: voto-claro
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build
+    buildCommand: npm ci --include=dev && npm run build
     startCommand: npm start
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
       - key: FACT_CHECK_API_KEY
-        sync: false
+        value: ""
