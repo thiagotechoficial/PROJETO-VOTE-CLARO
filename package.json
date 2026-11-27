@@ -1,0 +1,31 @@
+{
+  "name": "voto-claro",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "node scripts/dev-all.mjs",
+    "dev:web": "vite",
+    "dev:api": "node server/index.ts",
+    "build": "tsc -b && tsc -p tsconfig.server.json --noEmit && vite build && node scripts/build-server.mjs",
+    "start": "node dist-server/index.mjs",
+    "lint": "tsc --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "fastify": "^5.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.11"
+  }
+}
